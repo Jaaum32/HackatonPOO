@@ -6,10 +6,9 @@ public class ProdutoUI
 {
     List<Produto> _produtos = new List<Produto>();
 
-    public void createProduto(String nome, String desc, double preco, Categoria categoria)
+    public void createProduto(Produto produto)
     {
-        Produto prod = new Produto(nome, desc, preco, categoria);
-        _produtos.Add(prod);
+        _produtos.Add(produto);
     }
     public Produto? getIDProduto(int id)
     {
@@ -22,6 +21,31 @@ public class ProdutoUI
 
         }
         return null;
+    }
+    public int getPosProduto(int id)
+    {
+        for (int i = 0; i < _produtos.Count; i++)
+        {
+            if (_produtos[i].id == id)
+            {
+                return i;
+            }
+
+        }
+        return -1;
+    }
+
+    public void updateProduto(int id, Produto produto)
+    {
+        int pos = getPosProduto(id);
+        if (pos == -1)
+        {
+            Console.WriteLine("Não foi possivel editar, pois este produto não foi encontrado");
+        }
+        else
+        {
+            _produtos[pos] = produto;
+        }
     }
     public void removeProduto(int id)
     {
