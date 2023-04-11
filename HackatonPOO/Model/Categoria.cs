@@ -2,6 +2,7 @@ namespace HackatonPOO.Model;
 
 public class Categoria
 {
+    public int id;
     String nome;
     String desc;
 

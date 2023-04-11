@@ -2,6 +2,7 @@ namespace HackatonPOO.Model;
 
 public class Venda
 {
+    public int id;
     private Cliente cliente;
     private String data;
     private double valorTotal;
