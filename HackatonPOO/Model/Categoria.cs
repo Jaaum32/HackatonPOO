@@ -3,22 +3,23 @@ namespace HackatonPOO.Model;
 public class Categoria
 {
     public int id;
-    String nome;
-    String desc;
+    String? nome;
+    String? desc;
 
     public Categoria(String nome, String desc)
     {
         this.nome = nome;
         this.desc = nome;
     }
+    public Categoria(){}
 
-    public string Nome
+    public string? Nome
     {
         get { return nome; }
         set { this.nome = value; }
     }
 
-    public string Desc
+    public string? Desc
     {
         get { return Desc; }
         set { this.Desc = value; }

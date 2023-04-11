@@ -81,4 +81,13 @@ public class CategoriaUI
             categoria.RemoveAt(pos);
         }
     }
+    public void getAll()
+    {
+        for (int i = 0; i < categoria.Count; i++)
+        {
+            Console.WriteLine("[" + categoria[i].id + "]");
+            Console.WriteLine("Nome: " + categoria[i].Nome);
+            Console.WriteLine("Desc: " + categoria[i].Desc);
+        }
+    }
 }
