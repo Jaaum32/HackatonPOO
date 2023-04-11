@@ -22,19 +22,19 @@ public class Cliente
         set { this._nome = value; }
     }
 
-    public string Sobrenome
+    public string? Sobrenome
     {
         get { return Sobrenome; }
         set { this.Sobrenome = value; }
     }
 
-    public double Endereco
+    public string? Endereco
     {
         get { return Endereco; }
         set { this.Endereco = value; }
     }
 
-    public string Telefone
+    public string? Telefone
     {
         get { return Telefone; }
         set { this.Telefone = value; }

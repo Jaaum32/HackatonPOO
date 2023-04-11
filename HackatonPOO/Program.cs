@@ -36,21 +36,35 @@ internal class Program
                     Console.WriteLine("--- Cliente ---\n1 - Inserir\n2 - Alterar\n3 - Listar\n4 - Pesquisar\n5 - Remover");
                     switch (Convert.ToInt32(Console.ReadLine())) {
                         case 1:
+                            Cliente c = new Cliente();
                             Console.WriteLine("Nome: ");
-                            string? nome = Console.ReadLine();
+                            c.Nome = Console.ReadLine();
                             Console.WriteLine("Sobrenome: ");
-                            string? sobrenome = Console.ReadLine();
+                            c.Sobrenome = Console.ReadLine();
                             Console.WriteLine("Endereço: ");
-                            string? endereco = Console.ReadLine();
+                            c.Endereco = Console.ReadLine();
                             Console.WriteLine("Telefone: ");
-                            string? telefone = Console.ReadLine();
-                            Cliente c = new Cliente(nome, sobrenome, endereco, telefone);
+                            c.Telefone = Console.ReadLine();
+                            
                             break;
                         case 2:
-                    
+                            Console.WriteLine("Digite o ID do cliente a ser buscado: ");
+                            id = Convert.ToInt32(Console.ReadLine());
+
+                            Console.WriteLine(cui.getClient(id).ToString());
+                            
+                            Console.WriteLine("Nome: ");
+                            cui.clientes[cui.getPosCliente(id)].Nome = Console.ReadLine();
+                            Console.WriteLine("Sobrenome: ");
+                            cui.clientes[cui.getPosCliente(id)].Sobrenome = Console.ReadLine();
+                            Console.WriteLine("Endereço: ");
+                            cui.clientes[cui.getPosCliente(id)].Endereco = Console.ReadLine();
+                            Console.WriteLine("Telefone: ");
+                            cui.clientes[cui.getPosCliente(id)].Telefone = Console.ReadLine();
+
                             break;
                         case 3:
-                            
+                            cui.getAllClients();
                             break;
                         case 4:
                             Console.WriteLine("Digite o ID do cliente a ser buscado: ");

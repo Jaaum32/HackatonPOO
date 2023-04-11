@@ -4,11 +4,11 @@ namespace HackatonPOO.UI;
 
 public class ClienteUI
 {
-    private List<Cliente> _clientes = new List<Cliente>();
+    public List<Cliente> clientes = new List<Cliente>();
     
     public void createClient(Cliente cliente)
     {
-        _clientes.Add(cliente);
+        clientes.Add(cliente);
     }
     
     /// <summary>
@@ -19,16 +19,25 @@ public class ClienteUI
     /// <returns></returns>
     public Cliente getClient(int id)
     {
-        for (int i = 0; i < _clientes.Count; i++)
+        for (int i = 0; i < clientes.Count; i++)
         {
-            if (_clientes[i].id == id)
+            if (clientes[i].id == id)
             {
-                return _clientes[i];
+                return clientes[i];
             }
         }
 
         return null;
     }
+
+    public void getAllClients()
+    {
+        for (int i = 0; i < clientes.Count; i++)
+        {
+            Console.WriteLine(clientes[i].ToString());
+        }
+    }
+    
 
     /// <summary>
     /// Busca um cliente pelo seu id.
@@ -38,9 +47,9 @@ public class ClienteUI
     /// <returns></returns>
     public int getPosCliente(int id)
     {
-        for (int i = 0; i < _clientes.Count; i++)
+        for (int i = 0; i < clientes.Count; i++)
         {
-            if (_clientes[i].id == id)
+            if (clientes[i].id == id)
             {
                 return i;
             }
@@ -64,7 +73,7 @@ public class ClienteUI
         }
         else
         {
-            _clientes[pos] = cliente;
+            clientes[pos] = cliente;
         }
     }
     
@@ -78,7 +87,7 @@ public class ClienteUI
         }
         else
         {
-            _clientes.RemoveAt(pos);
+            clientes.RemoveAt(pos);
         }
     }
     
