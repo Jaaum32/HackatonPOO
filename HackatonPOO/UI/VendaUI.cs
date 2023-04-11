@@ -4,11 +4,11 @@ namespace HackatonPOO.UI;
 
 public class VendaUI
 {
-    private List<Venda> _sails = new List<Venda>();
+    private List<Venda> sails = new List<Venda>();
     
     public void createCategory(Venda venda)
     {
-        _sails.Add(venda);
+        sails.Add(venda);
     }
     
     /// <summary>
@@ -19,11 +19,11 @@ public class VendaUI
     /// <returns></returns>
     public Venda readSail(int id)
     {
-        for (int i = 0; i < _sails.Count; i++)
+        for (int i = 0; i < sails.Count; i++)
         {
-            if (_sails[i].id == id)
+            if (sails[i].id == id)
             {
-                return _sails[i];
+                return sails[i];
             }
         }
 
@@ -38,9 +38,9 @@ public class VendaUI
     /// <returns></returns>
     public int GetPosSail(int id)
     {
-        for (int i = 0; i < _sails.Count; i++)
+        for (int i = 0; i < sails.Count; i++)
         {
-            if (_sails[i].id == id)
+            if (sails[i].id == id)
             {
                 return i;
             }
@@ -64,7 +64,7 @@ public class VendaUI
         }
         else
         {
-            _sails[pos] = venda;
+            sails[pos] = venda;
         }
     }
     
@@ -78,7 +78,19 @@ public class VendaUI
         }
         else
         {
-            _sails.RemoveAt(pos);
+            sails.RemoveAt(pos);
+        }
+    }
+
+    public void getAll()
+    {
+        for (int i = 0; i < sails.Count; i++)
+        {
+            Console.WriteLine("[" + sails[i].id + "]");
+            Console.WriteLine("Data: " + sails[i].Data);
+            Console.WriteLine("Cliente: " + sails[i].Cliente);
+            Console.WriteLine("Produtos Comprados: " + sails[i].ProdutosComprados);
+            Console.WriteLine("Valor Total: " + sails[i].ValorTotal);
         }
     }
 }

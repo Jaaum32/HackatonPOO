@@ -4,11 +4,11 @@ namespace HackatonPOO.UI;
 
 public class CategoriaUI
 {
-    private List<Categoria> _categorys = new List<Categoria>();
+    private List<Categoria> categoria = new List<Categoria>();
     
-    public void createCategory(Categoria categoria)
+    public void createCategory(Categoria categ)
     {
-        _categorys.Add(categoria);
+        categoria.Add(categ);
     }
     
     /// <summary>
@@ -19,11 +19,11 @@ public class CategoriaUI
     /// <returns></returns>
     public Categoria readCategory(int id)
     {
-        for (int i = 0; i < _categorys.Count; i++)
+        for (int i = 0; i < categoria.Count; i++)
         {
-            if (_categorys[i].id == id)
+            if (categoria[i].id == id)
             {
-                return _categorys[i];
+                return categoria[i];
             }
         }
 
@@ -38,9 +38,9 @@ public class CategoriaUI
     /// <returns></returns>
     public int GetPosCategory(int id)
     {
-        for (int i = 0; i < _categorys.Count; i++)
+        for (int i = 0; i < categoria.Count; i++)
         {
-            if (_categorys[i].id == id)
+            if (categoria[i].id == id)
             {
                 return i;
             }
@@ -54,7 +54,7 @@ public class CategoriaUI
     /// </summary>
     /// <param name="id"></param>
     /// <param name="cliente"></param>
-    public void updateCategory(int id, Categoria categoria)
+    public void updateCategory(int id, Categoria categ)
     {
         int pos = GetPosCategory(id);
 
@@ -64,7 +64,7 @@ public class CategoriaUI
         }
         else
         {
-            _categorys[pos] = categoria;
+            categoria[pos] = categ;
         }
     }
     
@@ -78,7 +78,7 @@ public class CategoriaUI
         }
         else
         {
-            _categorys.RemoveAt(pos);
+            categoria.RemoveAt(pos);
         }
     }
 }
