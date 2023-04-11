@@ -2,6 +2,7 @@ namespace HackatonPOO.Model;
 
 public class Cliente
 {
+    public int id;
     private string nome;
     private string sobrenome;
     private string endereco;

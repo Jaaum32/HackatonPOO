@@ -2,6 +2,7 @@ namespace HackatonPOO.Model;
 
 public class Produto
 {
+    public int id;
     private string nome;
     private string desc;
     private double preco;
