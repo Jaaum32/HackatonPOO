@@ -27,19 +27,19 @@ public class Cliente
 
     public string? Sobrenome
     {
-        get { return Sobrenome; }
-        set { this.Sobrenome = value; }
+        get { return _sobrenome; }
+        set { this._sobrenome = value; }
     }
 
     public string? Endereco
     {
-        get { return Endereco; }
-        set { this.Endereco = value; }
+        get { return _endereco; }
+        set { this._endereco = value; }
     }
 
     public string? Telefone
     {
-        get { return Telefone; }
-        set { this.Telefone = value; }
+        get { return _telefone; }
+        set { this._telefone = value; }
     }
 }
