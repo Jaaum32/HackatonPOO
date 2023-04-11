@@ -90,5 +90,17 @@ public class ClienteUI
             clientes.RemoveAt(pos);
         }
     }
+
+    public void getAll()
+    {
+        for (int i = 0; i < clientes.Count; i++)
+        {
+            Console.WriteLine("[" + clientes[i].id + "]");
+            Console.WriteLine("Nome: " + clientes[i].Nome);
+            Console.WriteLine("Sobrenome: " + clientes[i].Sobrenome);
+            Console.WriteLine("Endereco: " + clientes[i].Endereco);
+            Console.WriteLine("Telefone: " + clientes[i].Telefone);
+        }
+    }
     
 }
