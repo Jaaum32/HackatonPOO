@@ -1,3 +1,4 @@
+using System.Globalization;
 using HackatonPOO.Model;
 
 namespace HackatonPOO.UI;
@@ -28,6 +29,14 @@ public class ClienteUI
         }
 
         return null;
+    }
+
+    public void getAllClients()
+    {
+        for (int i = 0; i < _clientes.Count; i++)
+        {
+            Console.WriteLine(_clientes[i].ToString());
+        }
     }
     
     /// <summary>
