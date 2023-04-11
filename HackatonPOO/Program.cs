@@ -1,3 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿Console.WriteLine("Loja de Roupa dos Gurizaum!");
 
-Console.WriteLine("Hello, World!");
+while (true)
+{ 
+    Console.WriteLine("--- Sistema ---\n1 - Produto\n2 - Cliente\n3 - Categoria\n4 - Venda");
+    
+}

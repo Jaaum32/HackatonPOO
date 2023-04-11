@@ -5,9 +5,9 @@ public class Produto
     private string nome;
     private string desc;
     private double preco;
-    private string categoria;
+    private Categoria categoria;
 
-    public Produto(String nome, String desc, double preco, String categoria)
+    public Produto(String nome, String desc, double preco, Categoria categoria)
     {
         this.nome = nome;
         this.desc = nome;
