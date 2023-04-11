@@ -15,6 +15,9 @@ public class Venda
         this.valorTotal = valorTotal;
         this.produtosComprados = produtosComprados;
     }
+    public Venda()
+    {
+    }
 
     public Cliente Cliente
     {
@@ -22,7 +25,7 @@ public class Venda
         set { this.cliente = value; }
     }
 
-    public string Data
+    public string? Data
     {
         get { return Data; }
         set { this.Data = value; }

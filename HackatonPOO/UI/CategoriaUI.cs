@@ -4,7 +4,7 @@ namespace HackatonPOO.UI;
 
 public class CategoriaUI
 {
-    private List<Categoria> categoria = new List<Categoria>();
+    public List<Categoria> categoria = new List<Categoria>();
     
     public void createCategory(Categoria categ)
     {

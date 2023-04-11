@@ -4,13 +4,13 @@ namespace HackatonPOO.UI;
 
 public class ProdutoUI
 {
-    List<Produto> produtos = new List<Produto>();
+    public List<Produto> produtos = new List<Produto>();
 
     public void createProduto(Produto produto)
     {
         produtos.Add(produto);
     }
-    public Produto? getIDProduto(int id)
+    public Produto getIDProduto(int id)
     {
         for (int i = 0; i < produtos.Count; i++)
         {

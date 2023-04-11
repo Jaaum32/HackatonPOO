@@ -6,7 +6,7 @@ public class VendaUI
 {
     private List<Venda> sails = new List<Venda>();
     
-    public void createCategory(Venda venda)
+    public void createVenda(Venda venda)
     {
         sails.Add(venda);
     }
