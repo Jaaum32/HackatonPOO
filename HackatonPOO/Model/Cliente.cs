@@ -15,6 +15,9 @@ public class Cliente
         this.endereco = endereco;
         this.telefone = telefone;
     }
+    
+    public Cliente()
+    {}
 
     public string Nome
     {
