@@ -4,11 +4,11 @@ namespace HackatonPOO.UI;
 
 public class ClienteUI
 {
-    private List<Cliente> _clientes = new List<Cliente>();
+    public List<Cliente> clientes = new List<Cliente>();
     
     public void createClient(Cliente cliente)
     {
-        _clientes.Add(cliente);
+        clientes.Add(cliente);
     }
     
     /// <summary>
@@ -17,30 +17,39 @@ public class ClienteUI
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public Cliente? readClient(int id)
+    public Cliente getClient(int id)
     {
-        for (int i = 0; i < _clientes.Count; i++)
+        for (int i = 0; i < clientes.Count; i++)
         {
-            if (_clientes[i].id == id)
+            if (clientes[i].id == id)
             {
-                return _clientes[i];
+                return clientes[i];
             }
         }
 
         return null;
     }
+
+    public void getAllClients()
+    {
+        for (int i = 0; i < clientes.Count; i++)
+        {
+            Console.WriteLine(clientes[i].ToString());
+        }
+    }
     
+
     /// <summary>
     /// Busca um cliente pelo seu id.
     /// caso o id não seja encontrado, o método retornará "-1".
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public int GetPosCliente(int id)
+    public int getPosCliente(int id)
     {
-        for (int i = 0; i < _clientes.Count; i++)
+        for (int i = 0; i < clientes.Count; i++)
         {
-            if (_clientes[i].id == id)
+            if (clientes[i].id == id)
             {
                 return i;
             }
@@ -56,7 +65,7 @@ public class ClienteUI
     /// <param name="cliente"></param>
     public void updateClient(int id, Cliente cliente)
     {
-        int pos = GetPosCliente(id);
+        int pos = getPosCliente(id);
 
         if (pos == -1)
         {
@@ -64,13 +73,13 @@ public class ClienteUI
         }
         else
         {
-            _clientes[pos] = cliente;
+            clientes[pos] = cliente;
         }
     }
     
     public void deleteClient(int id)
     {
-        int pos = GetPosCliente(id);
+        int pos = getPosCliente(id);
 
         if (pos == -1)
         {
@@ -78,7 +87,7 @@ public class ClienteUI
         }
         else
         {
-            _clientes.RemoveAt(pos);
+            clientes.RemoveAt(pos);
         }
     }
     
