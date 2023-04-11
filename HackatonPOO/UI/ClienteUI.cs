@@ -17,7 +17,7 @@ public class ClienteUI
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public Cliente readClient(int id)
+    public Cliente? readClient(int id)
     {
         for (int i = 0; i < _clientes.Count; i++)
         {
