@@ -17,7 +17,7 @@ public class ClienteUI
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public Cliente readClient(int id)
+    public Cliente getClient(int id)
     {
         for (int i = 0; i < _clientes.Count; i++)
         {
@@ -29,14 +29,14 @@ public class ClienteUI
 
         return null;
     }
-    
+
     /// <summary>
     /// Busca um cliente pelo seu id.
     /// caso o id não seja encontrado, o método retornará "-1".
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public int GetPosCliente(int id)
+    public int getPosCliente(int id)
     {
         for (int i = 0; i < _clientes.Count; i++)
         {
@@ -56,7 +56,7 @@ public class ClienteUI
     /// <param name="cliente"></param>
     public void updateClient(int id, Cliente cliente)
     {
-        int pos = GetPosCliente(id);
+        int pos = getPosCliente(id);
 
         if (pos == -1)
         {
@@ -70,7 +70,7 @@ public class ClienteUI
     
     public void deleteClient(int id)
     {
-        int pos = GetPosCliente(id);
+        int pos = getPosCliente(id);
 
         if (pos == -1)
         {

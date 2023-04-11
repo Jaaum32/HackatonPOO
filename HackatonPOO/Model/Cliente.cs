@@ -3,23 +3,23 @@ namespace HackatonPOO.Model;
 public class Cliente
 {
     public int id;
-    private string nome;
-    private string sobrenome;
-    private string endereco;
-    private string telefone;
+    private string? _nome;
+    private string? _sobrenome;
+    private string? _endereco;
+    private string? _telefone;
 
-    public Cliente(String nome, String sobrenome, String endereco, String telefone)
+    public Cliente(string? nome, string? sobrenome, string? endereco, string? telefone)
     {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.endereco = endereco;
-        this.telefone = telefone;
+        this._nome = nome;
+        this._sobrenome = sobrenome;
+        this._endereco = endereco;
+        this._telefone = telefone;
     }
 
-    public string Nome
+    public string? Nome
     {
-        get { return nome; }
-        set { this.nome = value; }
+        get { return _nome; }
+        set { this._nome = value; }
     }
 
     public string Sobrenome
