@@ -79,4 +79,17 @@ public class CategoriaUI
             Console.WriteLine(categoria[i].ToString());
         }
     }
+
+    public bool containsId(int id)
+    {
+        for (int i = 0; i < categoria.Count; i++)
+        {
+            if (categoria[i].id == id)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

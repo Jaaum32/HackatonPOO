@@ -47,6 +47,15 @@ internal class Program
                                 break;
                             case 1:
                                 Console.Clear();
+
+                                if (caui.categoria.Count == 0)
+                                {
+                                    Console.WriteLine("Cadastre uma cateroria para inserir um produto.");
+                                    Thread.Sleep(3000);
+                                    Console.Clear();
+                                    break;
+                                }
+
                                 Produto p = new Produto();
                                 Console.WriteLine("Nome: ");
                                 p.Nome = Console.ReadLine();
@@ -55,12 +64,30 @@ internal class Program
                                 Console.WriteLine("Preço: ");
                                 p.Preco = Convert.ToDouble(Console.ReadLine());
                                 Console.WriteLine("ID da Categoria: ");
+
                                 for (int i = 0; i < caui.categoria.Count; i++)
                                 {
                                     Console.WriteLine(caui.categoria[i].id + " - " + caui.categoria[i].Nome);
                                 }
 
-                                p.Categoria = caui.categoria[caui.getPosCategoria(Convert.ToInt32(Console.ReadLine()))];
+                                int idCategoria = 0;
+                                while (true)
+                                {
+                                    idCategoria = Convert.ToInt32(Console.ReadLine());
+                                    if (caui.containsId(idCategoria))
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Digite um id presente na lista:");
+                                        //Thread.Sleep(3000);
+                                        //Console.Clear();
+                                    }
+                                }
+
+
+                                p.Categoria = caui.categoria[caui.getPosCategoria(idCategoria)];
                                 Console.WriteLine();
                                 p.id = idCountProduto;
                                 idCountProduto++;
@@ -309,6 +336,22 @@ internal class Program
                                 execVenda = false;
                                 break;
                             case 1:
+                                if (cui.clientes.Count == 0)
+                                {
+                                    Console.WriteLine("Não é possivel realizar uma venda sem um cliente.");
+                                    Thread.Sleep(3000);
+                                    Console.Clear();
+                                    break;
+                                }
+
+                                if (pui.produtos.Count == 0)
+                                {
+                                    Console.WriteLine("Não é possivel realizar uma venda sem produtos.");
+                                    Thread.Sleep(3000);
+                                    Console.Clear();
+                                    break;
+                                }
+
                                 Console.Clear();
                                 Venda v = new Venda();
                                 Console.WriteLine("ID do Cliente: ");
@@ -318,9 +361,29 @@ internal class Program
                                                       cui.clientes[i].Sobrenome);
                                 }
 
-                                v.Cliente = cui.clientes[cui.getPosCliente(Convert.ToInt32(Console.ReadLine()))];
+                                int idCLiente = 0;
+                                while (true)
+                                {
+                                    idCLiente = Convert.ToInt32(Console.ReadLine());
+                                    if (cui.containsId(idCLiente))
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Digite um id presente na lista:");
+                                        //Thread.Sleep(3000);
+                                        //Console.Clear();
+                                    }
+                                }
+
+                                v.Cliente = cui.clientes[cui.getPosCliente(idCLiente)];
+
+
                                 Console.WriteLine("Data: ");
                                 v.Data = Console.ReadLine();
+
+
                                 List<Produto> p = new List<Produto>();
                                 double? val = 0;
                                 while (true)
@@ -334,13 +397,22 @@ internal class Program
 
                                     string? idp = Console.ReadLine();
 
-                                    if (idp == "X")
+                                    if (idp.ToUpper() == "X")
                                     {
                                         break;
                                     }
 
-                                    p.Add(pui.produtos[pui.getPosProduto(Convert.ToInt32(idp))]);
-                                    val += pui.produtos[pui.getPosProduto(Convert.ToInt32(idp))].Preco;
+                                    if (pui.containsId(Convert.ToInt32(idp)))
+                                    {
+                                        p.Add(pui.produtos[pui.getPosProduto(Convert.ToInt32(idp))]);
+                                        val += pui.produtos[pui.getPosProduto(Convert.ToInt32(idp))].Preco;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Digite um id presente na lista.");
+                                        //Thread.Sleep(3000);
+                                        //Console.Clear();
+                                    }
                                 }
 
                                 v.ProdutosComprados = p;

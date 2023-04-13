@@ -61,5 +61,16 @@ public class ProdutoUI
         }
     }
 
+    public bool containsId(int id)
+    {
+        for (int i = 0; i < produtos.Count; i++)
+        {
+            if (produtos[i].id == id)
+            {
+                return true;
+            }
+        }
 
+        return false;
+    }
 }

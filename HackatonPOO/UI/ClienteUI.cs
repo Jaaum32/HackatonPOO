@@ -81,4 +81,17 @@ public class ClienteUI
             Console.WriteLine(clientes[i].ToString());
         }
     }
+    
+    public bool containsId(int id)
+    {
+        for (int i = 0; i < clientes.Count; i++)
+        {
+            if (clientes[i].id == id)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
