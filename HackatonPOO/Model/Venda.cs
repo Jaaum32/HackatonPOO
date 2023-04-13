@@ -47,14 +47,23 @@ public class Venda
     {
         return "[" + id + "]\nCliente: " + cliente + "\nData: " + data + "\nValor Total: R$" + valorTotal + "\nProdutos Comprados: " + listar();
     }
-    public string listar(){
+    public string listar()
+    {
         string produtos = "";
-        for (int i = 0; i < produtosComprados.Count; i++)
+        if (produtosComprados == null)
         {
-           produtos += produtosComprados[i] + "\n";
+            return "nenhum produto comprado!";
         }
-        return produtos;
-        
+        else
+        {
+            for (int i = 0; i < produtosComprados.Count; i++)
+            {
+                produtos += produtosComprados[i] + "\n";
+            }
+            return produtos;
+        }
+
+
     }
 
 }
