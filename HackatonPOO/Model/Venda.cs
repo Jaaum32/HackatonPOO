@@ -45,7 +45,16 @@ public class Venda
 
     public override string ToString()
     {
-        return "[" + id + "]\nCliente: " + cliente + "\nData: " + data + "\nValor Total: R$" + valorTotal + "\nProdutos Comprados: " + produtosComprados;
+        return "[" + id + "]\nCliente: " + cliente + "\nData: " + data + "\nValor Total: R$" + valorTotal + "\nProdutos Comprados: " + listar();
+    }
+    public string listar(){
+        string produtos = "";
+        for (int i = 0; i < produtosComprados.Count; i++)
+        {
+           produtos += produtosComprados[i] + "\n";
+        }
+        return produtos;
+        
     }
 
 }
