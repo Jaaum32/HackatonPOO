@@ -238,16 +238,33 @@ internal class Program
                                 v.Cliente = cui.clientes[cui.getPosCliente(Convert.ToInt32(Console.ReadLine()))];
                                 Console.WriteLine("Data: ");
                                 v.Data = Console.ReadLine();
-                                Console.WriteLine("Valor total: ");
-                                v.ValorTotal = 9.0;
-                                v.id = idCountCategoria;
-                                idCountCategoria++;
+                                List<Produto> p = new List<Produto>();
+                                double val = 0;
+                                while (true)
+                                {
+                                    Console.WriteLine("Digite o ID do produto (digite X para parar de adicionar produtos): ");
+                                    string? idp = Console.ReadLine();
+
+                                    if (idp == "X")
+                                    {
+                                        break;
+                                    }
+                                    
+                                    p.Add(pui.produtos[pui.getPosProduto(Convert.ToInt32(idp))]);
+                                    val += pui.produtos[pui.getPosProduto(Convert.ToInt32(idp))].Preco;
+
+                                }
+
+                                v.ProdutosComprados = p;
+                                v.ValorTotal = val;
+                                v.id = idCountVenda;
+                                idCountVenda++;
                                 
                                 vui.createVenda(v);
 
                                 break;
                             case 2:
-                                Console.WriteLine("Digite o ID do categoria a ser buscado: ");
+                                Console.WriteLine("Digite o ID do venda a ser buscado: ");
                                 id = Convert.ToInt32(Console.ReadLine());
 
                                 Console.WriteLine(caui.readCategory(id).ToString());
