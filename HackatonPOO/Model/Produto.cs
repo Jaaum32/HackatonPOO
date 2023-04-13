@@ -46,6 +46,6 @@ public class Produto
 
     public override string ToString()
     {
-        return "[" + id + "]\nNome: " + nome + "\nCategoria: " + categoria + "\nPreco: R$" + preco + "\nDesc: " + desc;
+        return "[" + id + "]\nNome: " + nome + "\nCategoria: [" + categoria + "]\nPreco: R$" + preco + "\nDesc: " + desc;
     }
 }

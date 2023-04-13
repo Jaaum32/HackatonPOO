@@ -45,7 +45,7 @@ public class Venda
 
     public override string ToString()
     {
-        return "[" + id + "]\nCliente: " + cliente + "\nData: " + data + "\nValor Total: R$" + valorTotal + "\nProdutos Comprados: " + listar();
+        return "[" + id + "]\nCliente: [" + cliente + "]\nData: " + data + "\nValor Total: R$" + valorTotal + "\nProdutos Comprados: [" + listar() + "]";
     }
     public string listar()
     {
