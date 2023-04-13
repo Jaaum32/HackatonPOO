@@ -20,7 +20,10 @@ public class ProdutoUI
             }
 
         }
-        return null;
+        return 
+            
+            
+            null;
     }
     public int getPosProduto(int id)
     {
@@ -37,15 +40,8 @@ public class ProdutoUI
 
     public void updateProduto(int id, Produto produto)
     {
-        int pos = getPosProduto(id);
-        if (pos == -1)
-        {
-            Console.WriteLine("Não foi possivel editar, pois este produto não foi encontrado");
-        }
-        else
-        {
-            produtos[pos] = produto;
-        }
+        produtos[id] = produto;
+        
     }
     public void deleteProduto(int id)
     {

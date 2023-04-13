@@ -56,16 +56,7 @@ public class CategoriaUI
     /// <param name="cliente"></param>
     public void updateCategory(int id, Categoria categ)
     {
-        int pos = getPosCategoria(id);
-
-        if (pos == -1)
-        {
-            Console.WriteLine("Não foi possivel editar, pois esta categoria não foi encontrado");
-        }
-        else
-        {
-            categoria[pos] = categ;
-        }
+        categoria[id] = categ;
     }
     
     public void deleteCategoria(int id)

@@ -5,12 +5,12 @@ namespace HackatonPOO.UI;
 public class ClienteUI
 {
     public List<Cliente> clientes = new List<Cliente>();
-    
+
     public void createCliente(Cliente cliente)
     {
         clientes.Add(cliente);
     }
-    
+
     /// <summary>
     /// Busca um usúario pelo seu id.
     /// Caso o id não seja encontrado, o método retornará "null".
@@ -30,8 +30,6 @@ public class ClienteUI
         return null;
     }
 
-    
-    
 
     /// <summary>
     /// Busca um cliente pelo seu id.
@@ -59,18 +57,9 @@ public class ClienteUI
     /// <param name="cliente"></param>
     public void updateCliente(int id, Cliente cliente)
     {
-        int pos = getPosCliente(id);
-
-        if (pos == -1)
-        {
-            Console.WriteLine("Não foi possivel editar, pois este usuário não foi encontrado");
-        }
-        else
-        {
-            clientes[pos] = cliente;
-        }
+        clientes[id] = cliente;
     }
-    
+
     public void deleteCliente(int id)
     {
         int pos = getPosCliente(id);
@@ -84,6 +73,7 @@ public class ClienteUI
             clientes.RemoveAt(pos);
         }
     }
+
     public void getAll()
     {
         for (int i = 0; i < clientes.Count; i++)

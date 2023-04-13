@@ -4,7 +4,7 @@ namespace HackatonPOO.UI;
 
 public class VendaUI
 {
-    private List<Venda> vendas = new List<Venda>();
+    public List<Venda> vendas = new List<Venda>();
     
     public void createVenda(Venda venda)
     {
@@ -56,16 +56,8 @@ public class VendaUI
     /// <param name="cliente"></param>
     public void updateVenda(int id, Venda venda)
     {
-        int pos = GetPosVenda(id);
-
-        if (pos == -1)
-        {
-            Console.WriteLine("Não foi possivel editar, pois esta venda não foi encontrado");
-        }
-        else
-        {
-            vendas[pos] = venda;
-        }
+        vendas[id] = venda;
+        
     }
     
     public void deleteVenda(int id)
