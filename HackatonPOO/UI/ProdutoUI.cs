@@ -10,7 +10,7 @@ public class ProdutoUI
     {
         produtos.Add(produto);
     }
-    public Produto getIDProduto(int id)
+    public Produto getProduto(int id)
     {
         for (int i = 0; i < produtos.Count; i++)
         {
@@ -47,7 +47,7 @@ public class ProdutoUI
             produtos[pos] = produto;
         }
     }
-    public void removeProduto(int id)
+    public void deleteProduto(int id)
     {
         for (int i = 0; i < produtos.Count; i++)
         {

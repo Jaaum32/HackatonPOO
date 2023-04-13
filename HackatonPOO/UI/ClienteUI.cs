@@ -6,7 +6,7 @@ public class ClienteUI
 {
     public List<Cliente> clientes = new List<Cliente>();
     
-    public void createClient(Cliente cliente)
+    public void createCliente(Cliente cliente)
     {
         clientes.Add(cliente);
     }
@@ -17,7 +17,7 @@ public class ClienteUI
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public Cliente getClient(int id)
+    public Cliente getCliente(int id)
     {
         for (int i = 0; i < clientes.Count; i++)
         {
@@ -30,13 +30,7 @@ public class ClienteUI
         return null;
     }
 
-    public void getAllClients()
-    {
-        for (int i = 0; i < clientes.Count; i++)
-        {
-            Console.WriteLine(clientes[i].ToString());
-        }
-    }
+    
     
 
     /// <summary>
@@ -63,7 +57,7 @@ public class ClienteUI
     /// </summary>
     /// <param name="id"></param>
     /// <param name="cliente"></param>
-    public void updateClient(int id, Cliente cliente)
+    public void updateCliente(int id, Cliente cliente)
     {
         int pos = getPosCliente(id);
 
@@ -77,7 +71,7 @@ public class ClienteUI
         }
     }
     
-    public void deleteClient(int id)
+    public void deleteCliente(int id)
     {
         int pos = getPosCliente(id);
 
@@ -88,6 +82,13 @@ public class ClienteUI
         else
         {
             clientes.RemoveAt(pos);
+        }
+    }
+    public void getAll()
+    {
+        for (int i = 0; i < clientes.Count; i++)
+        {
+            Console.WriteLine(clientes[i].ToString());
         }
     }
 }

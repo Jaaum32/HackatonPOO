@@ -6,7 +6,7 @@ public class CategoriaUI
 {
     public List<Categoria> categoria = new List<Categoria>();
     
-    public void createCategory(Categoria categ)
+    public void createCategoria(Categoria categ)
     {
         categoria.Add(categ);
     }
@@ -17,7 +17,7 @@ public class CategoriaUI
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public Categoria readCategory(int id)
+    public Categoria getCategoria(int id)
     {
         for (int i = 0; i < categoria.Count; i++)
         {
@@ -36,7 +36,7 @@ public class CategoriaUI
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public int GetPosCategory(int id)
+    public int getPosCategoria(int id)
     {
         for (int i = 0; i < categoria.Count; i++)
         {
@@ -56,7 +56,7 @@ public class CategoriaUI
     /// <param name="cliente"></param>
     public void updateCategory(int id, Categoria categ)
     {
-        int pos = GetPosCategory(id);
+        int pos = getPosCategoria(id);
 
         if (pos == -1)
         {
@@ -68,9 +68,9 @@ public class CategoriaUI
         }
     }
     
-    public void deleteCategory(int id)
+    public void deleteCategoria(int id)
     {
-        int pos = GetPosCategory(id);
+        int pos = getPosCategoria(id);
 
         if (pos == -1)
         {
