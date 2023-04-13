@@ -1,27 +1,40 @@
-Software de Vendas - Console Application em C#
+# Software de Vendas - Console Application em C#
 Este é um software de vendas simples que usa a console application em C# para gerenciar o processo de venda de produtos.
 
-Funcionalidades
-O usuário pode visualizar a lista de produtos disponíveis
-O usuário pode adicionar produtos ao carrinho de compras
-O usuário pode visualizar o carrinho de compras
-O usuário pode remover produtos do carrinho de compras
-O usuário pode finalizar a compra e receber o valor total a ser pago
-Instalação
-Clone o repositório ou faça o download dos arquivos
-Abra a solução no Visual Studio
-Compile e execute o projeto
-Utilização
-Na tela inicial, o usuário poderá ver a lista de produtos disponíveis
-Selecione um produto digitando o número correspondente e pressione Enter
-Digite a quantidade desejada e pressione Enter
-Repita o processo até adicionar todos os produtos desejados ao carrinho
-Para visualizar o carrinho, digite "carrinho" e pressione Enter
-Para remover um produto do carrinho, digite o número correspondente e pressione Enter
-Para finalizar a compra, digite "finalizar" e pressione Enter
-O programa irá exibir o valor total a ser pago
-Contribuição
-Sinta-se à vontade para contribuir com este projeto. Envie pull requests com melhorias ou correções de bugs.
+## Funcionalidades
+- O usuário pode inserir um produto.
+- O usuário pode alterar um produto.
+- O usuário pode listar todos os produto.
+- O usuário pode pesquisar um produto.
+- O usuário pode remover um produto.
 
-Licença
-Este software é distribuído sob a Licença MIT. Consulte o arquivo LICENSE para obter mais informações.
+- O usuário pode inserir um cliente.
+- O usuário pode alterar um cliente.
+- O usuário pode listar todos os cliente.
+- O usuário pode pesquisar um cliente.
+- O usuário pode remover um cliente.
+
+- O usuário pode inserir uma categoria.
+- O usuário pode alterar uma categoria.
+- O usuário pode listar todas os categoria.
+- O usuário pode pesquisar uma categoria.
+- O usuário pode remover uma categoria.
+
+- O usuário pode inserir uma venda.
+- O usuário pode alterar uma venda.
+- O usuário pode listar todas os venda.
+- O usuário pode pesquisar uma venda.
+- O usuário pode remover uma venda.
+
+## Instalação
+1. Clone o repositório ou faça o download dos arquivos
+2. Abra a solução no Visual Studio
+3. Compile e execute o projeto
+## Utilização
+1. Na tela inicial, o usuário poderá ver o menu com as opções disponíveis
+2. Selecione uma opção digitando o número correspondente e pressione Enter
+
+## Contribuição
+Este é um software utilizado para uma avaliação.
+## Licença
+- Este software é distribuído sob a Licença MIT. Consulte o arquivo LICENSE para obter mais informações.
