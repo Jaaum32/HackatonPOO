@@ -85,9 +85,7 @@ public class CategoriaUI
     {
         for (int i = 0; i < categoria.Count; i++)
         {
-            Console.WriteLine("[" + categoria[i].id + "]");
-            Console.WriteLine("Nome: " + categoria[i].Nome);
-            Console.WriteLine("Desc: " + categoria[i].Desc);
+            categoria[i].ToString();
         }
     }
 }

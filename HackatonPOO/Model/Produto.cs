@@ -19,7 +19,7 @@ public class Produto
     public Produto()
     {
     }
-    
+
     public string? Nome
     {
         get { return nome; }
@@ -42,5 +42,10 @@ public class Produto
     {
         get { return Categoria; }
         set { this.Categoria = value; }
+    }
+
+    public override string ToString()
+    {
+        return "[" + id + "]\nNome: " + nome + "\nCategoria: " + categoria + "\nPreco: " + preco + "\nDesc " + desc;
     }
 }

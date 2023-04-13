@@ -11,7 +11,7 @@ public class Categoria
         this.nome = nome;
         this.desc = nome;
     }
-    public Categoria(){}
+    public Categoria() { }
 
     public string? Nome
     {
@@ -23,5 +23,9 @@ public class Categoria
     {
         get { return Desc; }
         set { this.Desc = value; }
+    }
+    public override string ToString()
+    {
+        return "[" + id + "]\nNome: " + nome + "\nDesc: " + desc;
     }
 }
