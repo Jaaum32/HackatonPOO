@@ -3,10 +3,10 @@ namespace HackatonPOO.Model;
 public class Venda
 {
     public int id;
-    private Cliente cliente;
-    private String data;
-    private double valorTotal;
-    private List<Produto> produtosComprados;
+    private Cliente? cliente;
+    private String? data;
+    private double? valorTotal;
+    private List<Produto>? produtosComprados;
 
     public Venda(Cliente cliente, String data, double valorTotal, List<Produto> produtosComprados)
     {
@@ -19,7 +19,7 @@ public class Venda
     {
     }
 
-    public Cliente Cliente
+    public Cliente? Cliente
     {
         get { return cliente; }
         set { this.cliente = value; }
@@ -27,25 +27,25 @@ public class Venda
 
     public string? Data
     {
-        get { return Data; }
-        set { this.Data = value; }
+        get { return data; }
+        set { this.data = value; }
     }
 
-    public double ValorTotal
+    public double? ValorTotal
     {
-        get { return ValorTotal; }
-        set { this.ValorTotal = value; }
+        get { return valorTotal; }
+        set { this.valorTotal = value; }
     }
 
-    public List<Produto> ProdutosComprados
+    public List<Produto>? ProdutosComprados
     {
-        get { return ProdutosComprados; }
-        set { this.ProdutosComprados = value; }
+        get { return produtosComprados; }
+        set { this.produtosComprados = value; }
     }
 
     public override string ToString()
     {
-        return "[" + id + "]\nCliente: " + cliente + "\nData: " + data + "\nValor Total: " + valorTotal + "\nProdutos Comprados " + produtosComprados;
+        return "[" + id + "]\nCliente: " + cliente + "\nData: " + data + "\nValor Total: R$" + valorTotal + "\nProdutos Comprados: " + produtosComprados;
     }
 
 }

@@ -5,8 +5,8 @@ public class Produto
     public int id;
     private string? nome;
     private string? desc;
-    private double preco;
-    private Categoria categoria;
+    private double? preco;
+    private Categoria? categoria;
 
     public Produto(string? nome, String desc, double preco, Categoria categoria)
     {
@@ -32,13 +32,13 @@ public class Produto
         set { this.desc = value; }
     }
 
-    public double Preco
+    public double? Preco
     {
         get { return preco; }
         set { this.preco = value; }
     }
 
-    public Categoria Categoria
+    public Categoria? Categoria
     {
         get { return categoria; }
         set { this.categoria = value; }
@@ -46,6 +46,6 @@ public class Produto
 
     public override string ToString()
     {
-        return "[" + id + "]\nNome: " + nome + "\nCategoria: " + categoria + "\nPreco: " + preco + "\nDesc " + desc;
+        return "[" + id + "]\nNome: " + nome + "\nCategoria: " + categoria + "\nPreco: R$" + preco + "\nDesc: " + desc;
     }
 }

@@ -4,11 +4,11 @@ namespace HackatonPOO.UI;
 
 public class VendaUI
 {
-    private List<Venda> sails = new List<Venda>();
+    private List<Venda> vendas = new List<Venda>();
     
     public void createVenda(Venda venda)
     {
-        sails.Add(venda);
+        vendas.Add(venda);
     }
     
     /// <summary>
@@ -17,13 +17,13 @@ public class VendaUI
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public Venda readSail(int id)
+    public Venda getVenda(int id)
     {
-        for (int i = 0; i < sails.Count; i++)
+        for (int i = 0; i < vendas.Count; i++)
         {
-            if (sails[i].id == id)
+            if (vendas[i].id == id)
             {
-                return sails[i];
+                return vendas[i];
             }
         }
 
@@ -36,11 +36,11 @@ public class VendaUI
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public int GetPosSail(int id)
+    public int GetPosVenda(int id)
     {
-        for (int i = 0; i < sails.Count; i++)
+        for (int i = 0; i < vendas.Count; i++)
         {
-            if (sails[i].id == id)
+            if (vendas[i].id == id)
             {
                 return i;
             }
@@ -54,9 +54,9 @@ public class VendaUI
     /// </summary>
     /// <param name="id"></param>
     /// <param name="cliente"></param>
-    public void updateCategory(int id, Venda venda)
+    public void updateVenda(int id, Venda venda)
     {
-        int pos = GetPosSail(id);
+        int pos = GetPosVenda(id);
 
         if (pos == -1)
         {
@@ -64,13 +64,13 @@ public class VendaUI
         }
         else
         {
-            sails[pos] = venda;
+            vendas[pos] = venda;
         }
     }
     
-    public void deleteSail(int id)
+    public void deleteVenda(int id)
     {
-        int pos = GetPosSail(id);
+        int pos = GetPosVenda(id);
 
         if (pos == -1)
         {
@@ -78,15 +78,15 @@ public class VendaUI
         }
         else
         {
-            sails.RemoveAt(pos);
+            vendas.RemoveAt(pos);
         }
     }
 
     public void getAll()
     {
-        for (int i = 0; i < sails.Count; i++)
+        for (int i = 0; i < vendas.Count; i++)
         {
-            sails.ToString();
+           Console.WriteLine(vendas[i].ToString());
         }
     }
 }
