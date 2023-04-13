@@ -61,7 +61,7 @@ public class ProdutoUI
     {
         for (int i = 0; i < produtos.Count; i++)
         {
-           produtos.ToString();
+            Console.WriteLine(produtos[i].ToString());
         }
     }
 

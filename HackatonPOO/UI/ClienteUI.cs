@@ -90,13 +90,4 @@ public class ClienteUI
             clientes.RemoveAt(pos);
         }
     }
-
-    public void getAll()
-    {
-        for (int i = 0; i < clientes.Count; i++)
-        {
-            clientes.ToString();
-        }
-    }
-    
 }

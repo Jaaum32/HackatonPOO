@@ -21,8 +21,8 @@ public class Categoria
 
     public string? Desc
     {
-        get { return Desc; }
-        set { this.Desc = value; }
+        get { return desc; }
+        set { this.desc = value; }
     }
     public override string ToString()
     {

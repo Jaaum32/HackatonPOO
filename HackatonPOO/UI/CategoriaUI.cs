@@ -85,7 +85,7 @@ public class CategoriaUI
     {
         for (int i = 0; i < categoria.Count; i++)
         {
-            categoria[i].ToString();
+            Console.WriteLine(categoria[i].ToString());
         }
     }
 }

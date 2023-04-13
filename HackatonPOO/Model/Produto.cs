@@ -28,20 +28,20 @@ public class Produto
 
     public string? Desc
     {
-        get { return Desc; }
-        set { this.Desc = value; }
+        get { return desc; }
+        set { this.desc = value; }
     }
 
     public double Preco
     {
-        get { return Preco; }
-        set { this.Preco = value; }
+        get { return preco; }
+        set { this.preco = value; }
     }
 
     public Categoria Categoria
     {
-        get { return Categoria; }
-        set { this.Categoria = value; }
+        get { return categoria; }
+        set { this.categoria = value; }
     }
 
     public override string ToString()
