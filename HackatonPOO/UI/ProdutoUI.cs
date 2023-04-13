@@ -61,11 +61,9 @@ public class ProdutoUI
     {
         for (int i = 0; i < produtos.Count; i++)
         {
-            Console.WriteLine("[" + produtos[i].id + "]");
-            Console.WriteLine("Nome: " + produtos[i].Nome);
-            Console.WriteLine("Preco: " + produtos[i].Preco);
-            Console.WriteLine("Categoria: " + produtos[i].Categoria);
-            Console.WriteLine("Desc: " + produtos[i].Desc);
+           produtos.ToString();
         }
     }
+
+
 }

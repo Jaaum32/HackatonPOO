@@ -86,11 +86,7 @@ public class VendaUI
     {
         for (int i = 0; i < sails.Count; i++)
         {
-            Console.WriteLine("[" + sails[i].id + "]");
-            Console.WriteLine("Data: " + sails[i].Data);
-            Console.WriteLine("Cliente: " + sails[i].Cliente);
-            Console.WriteLine("Produtos Comprados: " + sails[i].ProdutosComprados);
-            Console.WriteLine("Valor Total: " + sails[i].ValorTotal);
+            sails.ToString();
         }
     }
 }

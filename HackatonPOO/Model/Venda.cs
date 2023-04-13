@@ -42,4 +42,10 @@ public class Venda
         get { return ProdutosComprados; }
         set { this.ProdutosComprados = value; }
     }
+
+    public override string ToString()
+    {
+        return "[" + id + "]\nCliente: " + cliente + "\nData: " + data + "\nValor Total: " + valorTotal + "\nProdutos Comprados " + produtosComprados;
+    }
+
 }
