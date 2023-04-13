@@ -19,7 +19,7 @@ internal class Program
         bool execMenu = true;
         bool execProd = true;
         bool execClient = true;
-        bool execCategoria = true;
+        bool execCategoria = true;//a
         bool execVenda = true;
 
         while (execMenu)
