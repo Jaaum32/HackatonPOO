@@ -50,7 +50,7 @@ internal class Program
                                 Console.WriteLine("Preço: ");
                                 p.Preco = Convert.ToDouble(Console.ReadLine());
                                 Console.WriteLine("ID da Categoria: ");
-                                p.Categoria = caui.categoria[caui.GetPosCategory(Convert.ToInt32(Console.ReadLine()))];
+                                p.Categoria = caui.categoria[caui.getPosCategoria(Convert.ToInt32(Console.ReadLine()))];
                                 p.id = idCountProduto;
                                 idCountProduto++;
                                 
@@ -61,7 +61,7 @@ internal class Program
                                 Console.WriteLine("Digite o ID do produto a ser buscado: ");
                                 id = Convert.ToInt32(Console.ReadLine());
 
-                                Console.WriteLine(pui.getIDProduto(id).ToString());
+                                Console.WriteLine(pui.getProduto(id).ToString());
                                 
                                 Console.WriteLine("Nome: ");
                                 pui.produtos[pui.getPosProduto(id)].Nome = Console.ReadLine();
@@ -70,7 +70,7 @@ internal class Program
                                 Console.WriteLine("Preço: ");
                                 pui.produtos[pui.getPosProduto(id)].Preco = Convert.ToDouble(Console.ReadLine());
                                 Console.WriteLine("ID da Categoria: ");
-                                pui.produtos[pui.getPosProduto(id)].Categoria = caui.categoria[caui.GetPosCategory(Convert.ToInt32(Console.ReadLine()))];
+                                pui.produtos[pui.getPosProduto(id)].Categoria = caui.categoria[caui.getPosCategoria(Convert.ToInt32(Console.ReadLine()))];
 
                                 break;
                             case 3:
@@ -80,13 +80,13 @@ internal class Program
                                 Console.WriteLine("Digite o ID do produto a ser buscado: ");
                                 id = Convert.ToInt32(Console.ReadLine());
 
-                                Console.WriteLine(pui.getIDProduto(id).ToString());
+                                Console.WriteLine(pui.getProduto(id).ToString());
                                 break;
                             case 5:
                                 Console.WriteLine("Digite o ID do produto para remover: ");
                                 id = Convert.ToInt32(Console.ReadLine());
 
-                                pui.removeProduto(id);
+                                pui.deleteProduto(id);
                                 break;
                             default:
                                 Console.WriteLine("Este número não está no MENU!");
@@ -120,14 +120,14 @@ internal class Program
                                 c.id = idCountClient;
                                 idCountClient++;
                                 
-                                cui.createClient(c);
+                                cui.createCliente(c);
 
                                 break;
                             case 2:
                                 Console.WriteLine("Digite o ID do cliente a ser buscado: ");
                                 id = Convert.ToInt32(Console.ReadLine());
 
-                                Console.WriteLine(cui.getClient(id).ToString());
+                                Console.WriteLine(cui.getCliente(id).ToString());
 
                                 Console.WriteLine("Nome: ");
                                 cui.clientes[cui.getPosCliente(id)].Nome = Console.ReadLine();
@@ -140,19 +140,19 @@ internal class Program
 
                                 break;
                             case 3:
-                                cui.getAllClients();
+                                cui.getAll();
                                 break;
                             case 4:
                                 Console.WriteLine("Digite o ID do cliente a ser buscado: ");
                                 id = Convert.ToInt32(Console.ReadLine());
 
-                                Console.WriteLine(cui.getClient(id).ToString());
+                                Console.WriteLine(cui.getCliente(id).ToString());
                                 break;
                             case 5:
                                 Console.WriteLine("Digite o ID do cliente para remover: ");
                                 id = Convert.ToInt32(Console.ReadLine());
 
-                                cui.deleteClient(id);
+                                cui.deleteCliente(id);
                                 break;
                             default:
                                 Console.WriteLine("Este número não está no MENU!");
@@ -182,19 +182,19 @@ internal class Program
                                 c.id = idCountCategoria;
                                 idCountCategoria++;
 
-                                caui.createCategory(c);
+                                caui.createCategoria(c);
                                 
                                 break;
                             case 2:
                                 Console.WriteLine("Digite o ID do categoria a ser buscado: ");
                                 id = Convert.ToInt32(Console.ReadLine());
 
-                                Console.WriteLine(caui.readCategory(id).ToString());
+                                Console.WriteLine(caui.getCategoria(id).ToString());
 
                                 Console.WriteLine("Nome: ");
-                                caui.categoria[caui.GetPosCategory(id)].Nome = Console.ReadLine();
+                                caui.categoria[caui.getPosCategoria(id)].Nome = Console.ReadLine();
                                 Console.WriteLine("Descricao: ");
-                                caui.categoria[caui.GetPosCategory(id)].Desc = Console.ReadLine();
+                                caui.categoria[caui.getPosCategoria(id)].Desc = Console.ReadLine();
                                 
                                 break;
                             case 3:
@@ -204,13 +204,13 @@ internal class Program
                                 Console.WriteLine("Digite o ID do categoria a ser buscado: ");
                                 id = Convert.ToInt32(Console.ReadLine());
 
-                                Console.WriteLine(caui.readCategory(id).ToString());
+                                Console.WriteLine(caui.getCategoria(id).ToString());
                                 break;
                             case 5:
                                 Console.WriteLine("Digite o ID do categoria para remover: ");
                                 id = Convert.ToInt32(Console.ReadLine());
 
-                                caui.deleteCategory(id);
+                                caui.deleteCategoria(id);
                                 break;
                             default:
                                 Console.WriteLine("Este número não está no MENU!");
@@ -239,7 +239,7 @@ internal class Program
                                 Console.WriteLine("Data: ");
                                 v.Data = Console.ReadLine();
                                 List<Produto> p = new List<Produto>();
-                                double val = 0;
+                                double? val = 0;
                                 while (true)
                                 {
                                     Console.WriteLine("Digite o ID do produto (digite X para parar de adicionar produtos): ");
@@ -264,31 +264,31 @@ internal class Program
 
                                 break;
                             case 2:
-                                Console.WriteLine("Digite o ID do venda a ser buscado: ");
+                                Console.WriteLine("Digite o ID da venda a ser buscado: ");
                                 id = Convert.ToInt32(Console.ReadLine());
 
-                                Console.WriteLine(caui.readCategory(id).ToString());
+                                Console.WriteLine(caui.getCategoria(id).ToString());
 
                                 Console.WriteLine("Nome: ");
-                                caui.categoria[caui.GetPosCategory(id)].Nome = Console.ReadLine();
+                                caui.categoria[caui.getPosCategoria(id)].Nome = Console.ReadLine();
                                 Console.WriteLine("Descricao: ");
-                                caui.categoria[caui.GetPosCategory(id)].Desc = Console.ReadLine();
+                                caui.categoria[caui.getPosCategoria(id)].Desc = Console.ReadLine();
                                 
                                 break;
                             case 3:
-                                caui.getAll();
+                                vui.getAll();
                                 break;
                             case 4:
-                                Console.WriteLine("Digite o ID do categoria a ser buscado: ");
+                                Console.WriteLine("Digite o ID da venda a ser buscado: ");
                                 id = Convert.ToInt32(Console.ReadLine());
 
-                                Console.WriteLine(caui.readCategory(id).ToString());
+                                Console.WriteLine(vui.getVenda(id).ToString());
                                 break;
                             case 5:
-                                Console.WriteLine("Digite o ID do categoria para remover: ");
+                                Console.WriteLine("Digite o ID da venda para remover: ");
                                 id = Convert.ToInt32(Console.ReadLine());
 
-                                caui.deleteCategory(id);
+                                vui.deleteVenda(id);
                                 break;
                             default:
                                 Console.WriteLine("Este número não está no MENU!");
